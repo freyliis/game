@@ -2,7 +2,7 @@ package ak.test.service.impl;
 
 import ak.test.model.Session;
 import ak.test.repository.SessionRepository;
-import ak.test.service.impl.SessionService;
+import ak.test.service.SessionService;
 
 public class SessionServiceImpl implements SessionService {
 
