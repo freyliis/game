@@ -1,4 +1,4 @@
-package ak.test.service.impl.impl;
+package ak.test.service.impl;
 
 import ak.test.model.Session;
 import ak.test.repository.SessionRepository;

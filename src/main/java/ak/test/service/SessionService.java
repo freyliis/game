@@ -1,4 +1,4 @@
-package ak.test.service.impl;
+package ak.test.service;
 
 public interface SessionService {
 

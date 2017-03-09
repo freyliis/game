@@ -1,7 +1,8 @@
-package ak.test.service.impl;
+package ak.test.service;
 
 import ak.test.repository.impl.SessionRepositoryInMemory;
-import ak.test.service.impl.impl.SessionServiceImpl;
+import ak.test.service.impl.SessionServiceImpl;
+import ak.test.service.impl.SessionServiceImpl;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.not;
