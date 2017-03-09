@@ -1,0 +1,19 @@
+plugins {
+    id 'net.saliman.cobertura' version '2.4.0'
+}
+group 'ak.test'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testRuntime "org.slf4j:slf4j-api:1.7.10"
+}
+
+test.finalizedBy(project.tasks.coberturaCheck)
