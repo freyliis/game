@@ -2,8 +2,10 @@ package ak.test.repository;
 
 import ak.test.model.Level;
 
-public interface LevelRepository {
-    Level createLevel(String levelId);
+import java.util.Optional;
 
-    Level getLevel(String levelId);
+public interface LevelRepository {
+    Level createLevel(String levelId, int scoreListLimit);
+
+    Optional<Level> getLevel(String levelId);
 }

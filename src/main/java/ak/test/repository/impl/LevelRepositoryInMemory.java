@@ -12,21 +12,17 @@ public class LevelRepositoryInMemory implements LevelRepository {
     private Set<Level> levels = new HashSet<>();
 
     @Override
-    public Level createLevel(String levelId) {
+    public Level createLevel(String levelId, int limit) {
         if (levelId == null || levelId.length() == 0) {
             throw new IllegalArgumentException();
         }
-        Level level = new Level(levelId);
+        Level level = new Level(levelId, limit);
         levels.add(level);
         return level;
     }
 
     @Override
-    public Level getLevel(String levelId) {
-        Optional<Level> level = levels.stream().filter(value -> value.getLevelId().equals(levelId)).findFirst();
-        if (level.isPresent()) {
-            return level.get();
-        }
-        return null;
+    public Optional<Level> getLevel(String levelId) {
+        return levels.stream().filter(value -> value.getLevelId().equals(levelId)).findFirst();
     }
 }
